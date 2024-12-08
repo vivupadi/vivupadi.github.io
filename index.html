@@ -34,6 +34,14 @@
 
         <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
 
+<!--
+        <style>
+            #chatbox { width: 400px; height: 500px; border: 1px solid #ccc; overflow-y: auto; }
+            .message { margin: 10px; padding: 10px; border-radius: 5px; }
+            .user { background-color: #d1f7c4; text-align: right; }
+            .bot { background-color: #f7d4d1; text-align: left; }
+        </style>
+-->
         
 <!--
 
@@ -85,11 +93,11 @@ https://templatemo.com/tm-578-first-portfolio
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_4">Qualification</a>
                         </li>
-
+<!--
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_5">Skills</a>
                         </li>
-
+-->
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_6">Contact</a>
                         </li>
@@ -212,12 +220,13 @@ https://templatemo.com/tm-578-first-portfolio
 
                                         <p class="featured-text">Project Finished</p>
                                     </div>
-
+<!--
                                     <div class="col-lg-6 col-6 featured-border-start ps-5 pt-4">
                                         <strong class="featured-numbers">72+</strong>
 
                                         <p class="featured-text">Digital Awards</p>
                                     </div>
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -278,11 +287,13 @@ https://templatemo.com/tm-578-first-portfolio
                                             <h3 class="mb-0">NLP</h3>
 
                                             <div class="services-price-wrap ms-auto">
+                                                <!--
                                                 <p class="services-price-text mb-0">$2,400</p>
                                                 <div class="services-price-overlay"></div>
+                                            -->
                                             </div>
                                         </div>
-
+                                        
                                         <p>Sentiment Analysis GUI using PyQt and NLP concepts.</p>
 
                                         <a href="https://github.com/vivupadi/Sentiment_analysis" class="custom-btn custom-border-btn btn mt-3">Discover More</a>
@@ -297,10 +308,12 @@ https://templatemo.com/tm-578-first-portfolio
                                     <div class="services-thumb services-thumb-up">
                                         <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
                                             <h3 class="mb-0">Computer Vision</h3>
-
+                
                                             <div class="services-price-wrap ms-auto">
+                                                <!--
                                                 <p class="services-price-text mb-0">$1,200</p>
                                                 <div class="services-price-overlay"></div>
+                                                -->
                                             </div>
                                         </div>
 
@@ -320,8 +333,10 @@ https://templatemo.com/tm-578-first-portfolio
                                             <h3 class="mb-0">Regression & Classification</h3>
 
                                             <div class="services-price-wrap ms-auto">
+                                                <!--
                                                 <p class="services-price-text mb-0">$3,600</p>
                                                 <div class="services-price-overlay"></div>
+                                            -->
                                             </div>
                                         </div>
 
@@ -341,8 +356,10 @@ https://templatemo.com/tm-578-first-portfolio
                                             <h3 class="mb-0">Web Development</h3>
 
                                             <div class="services-price-wrap ms-auto">
+                                                <!--
                                                 <p class="services-price-text mb-0">$1,450</p>
                                                 <div class="services-price-overlay"></div>
+                                            -->
                                             </div>
                                         </div>
 
@@ -596,6 +613,12 @@ https://templatemo.com/tm-578-first-portfolio
             </div>
         </footer>
 
+        <div id="chatbot-container">
+            <input type="text" id="user-input" placeholder="Ask me anything...">
+            <button id="send-btn">Send</button>
+            <div id="chat-output"></div>
+        </div>
+
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -604,6 +627,7 @@ https://templatemo.com/tm-578-first-portfolio
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/chatbot.js"></script>
 
     </body>
 </html>
