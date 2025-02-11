@@ -1,7 +1,7 @@
 async function sendMessage() {
     let userInput = document.getElementById("userInput").value;
     
-    let response = await fetch("https://your-app.onrender.com/chat", { 
+    let response = await fetch("https://vivupadi-github-io.onrender.com/chat", { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput })
