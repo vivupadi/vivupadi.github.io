@@ -33,23 +33,35 @@ HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 loader = PyPDFLoader(file_path="C:\\Users\\Vivupadi\\Desktop\\Portfolio\\Vivek Padayattil_CV_2024.pdf")
 documents = loader.load()
 
+# Extract text from documents
+text_chunks = [doc.page_content for doc in documents]
+
 # Create embeddings and vector store
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vectorstore = FAISS.from_documents(documents, embeddings)
+vectorstore = FAISS.from_texts(text_chunks, embeddings)
 
 # Set up Hugging Face model
 qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2", tokenizer="deepset/roberta-base-squad2")
-llm = HuggingFacePipeline(pipeline=qa_pipeline)
+#llm = HuggingFacePipeline(pipeline=qa_pipeline)
 
-# Create RAG-based chain
-qa_chain = RetrievalQA.from_chain_type(llm=llm, retriever=vectorstore.as_retriever())
+# Retrieval function
+def retrieve_relevant_text(query):
+    """Retrieve the most relevant CV section from FAISS."""
+    results = vectorstore.similarity_search(query, k=1)
+    return results[0].page_content if results else "No relevant information found."
 
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
     question = data.get('message', '')
-    response = qa_chain.run({"query": question})
-    return jsonify({"reply": response})
+
+    # Retrieve relevant context
+    context = retrieve_relevant_text(question)
+
+    # Get answer from the QA model
+    response = qa_pipeline({"question": question, "context": context})
+
+    return jsonify({"reply": response["answer"]})
 
 if __name__ == '__main__':
     app.run(debug=True)
