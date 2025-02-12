@@ -54,12 +54,19 @@ def retrieve_relevant_text(query):
 def chat():
     data = request.json
     question = data.get('message', '')
-
+    
+    # Print received question
+    print(f"Question received: {question}")
+    
     # Retrieve relevant context
     context = retrieve_relevant_text(question)
+    print(f"Context for question '{question}': {context}")
 
     # Get answer from the QA model
     response = qa_pipeline({"question": question, "context": context})
+    
+    # Check the response from the QA model
+    print(f"QA response: {response}")
 
     return jsonify({"reply": response["answer"]})
 
