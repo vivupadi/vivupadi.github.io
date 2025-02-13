@@ -83,5 +83,5 @@ def chat():
     return jsonify({"reply": response["answer"]})
 
 if __name__ == '__main__': 
-    port = int(os.getenv('PORT', 5000))  # Render provides PORT
+    port = int(os.getenv('PORT', 5000))  # Render provides PORT only required for render
     app.run(debug=True)
