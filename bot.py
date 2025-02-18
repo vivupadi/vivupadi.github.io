@@ -28,7 +28,8 @@ API_KEY = os.getenv('api_key')
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 # Load your CV as a JSON document
-loader = PyPDFLoader(file_path="C:\\Users\\Vivupadi\\Desktop\\Portfolio\\Vivek Padayattil_CV_2024.pdf")
+#loader = PyPDFLoader(file_path="C:\\Users\\Vivupadi\\Desktop\\Portfolio\\Vivek Padayattil_CV_2024.pdf")
+loader = PyPDFLoader(file_path="Vivek Padayattil_CV_2024.pdf")
 documents = loader.load()
 
 # Extract text from documents
