@@ -29,11 +29,18 @@ HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 # Load your CV as a JSON document
 #loader = PyPDFLoader(file_path="C:\\Users\\Vivupadi\\Desktop\\Portfolio\\Vivek Padayattil_CV_2024.pdf")
-loader = PyPDFLoader(file_path="static/Vivek Padayattil_CV_2024.pdf")
+file_path = os.path.join(os.getcwd(), "static", "Vivek Padayattil_CV_2024.pdf")
+#loader = PyPDFLoader(file_path="static/Vivek Padayattil_CV_2024.pdf")
+loader = PyPDFLoader(file_path=file_path)
 documents = loader.load()
 
 # Extract text from documents
 text_chunks = [doc.page_content for doc in documents]
+
+if not text_chunks:
+    print("❌ No text extracted from PDF!")
+
+print(f"✅ Extracted {len(text_chunks)} text chunks from PDF.")
 
 # Create embeddings and vector store
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -85,4 +92,5 @@ def chat():
 
 if __name__ == '__main__': 
     port = int(os.getenv('PORT', 10000))  # Render provides PORT only required for render
+    print(f"🚀 Running Flask on port {port}")
     app.run(host="0.0.0.0", port = port)
