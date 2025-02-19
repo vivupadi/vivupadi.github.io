@@ -29,7 +29,7 @@ HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 # Load your CV as a JSON document
 #loader = PyPDFLoader(file_path="C:\\Users\\Vivupadi\\Desktop\\Portfolio\\Vivek Padayattil_CV_2024.pdf")
-loader = PyPDFLoader(file_path="Vivek Padayattil_CV_2024.pdf")
+loader = PyPDFLoader(file_path="static/Vivek Padayattil_CV_2024.pdf")
 documents = loader.load()
 
 # Extract text from documents
@@ -85,4 +85,4 @@ def chat():
 
 if __name__ == '__main__': 
     port = int(os.getenv('PORT', 10000))  # Render provides PORT only required for render
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port = port)
