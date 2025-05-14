@@ -53,8 +53,8 @@ def load_or_process_documents():
     
     # Better chunking
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=500,
-        chunk_overlap=100,
+        chunk_size=100,
+        chunk_overlap=10,
         separators=["\n\n", "\n", "(?<=\. )", " "]
     )
     
