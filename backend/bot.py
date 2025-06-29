@@ -48,12 +48,12 @@ def load_or_process_documents():
         with open(INDEX_PATH, 'rb') as f:
             return pickle.load(f)
     
-    loader = PyPDFLoader("static/Vivek Padayattil_CV_2024.pdf")
+    loader = PyPDFLoader("static/Vivek Padayattil_CV_2.pdf")
     documents = loader.load()
     
     # Better chunking
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=100,
+        chunk_size=10,
         chunk_overlap=10,
         separators=["\n\n", "\n", "(?<=\. )", " "]
     )
@@ -91,6 +91,10 @@ def retrieve_context(query, vectorstore, k=3):
 # --- API Endpoint ---
 vectorstore = load_or_process_documents()
 qa_pipeline = initialize_qa_model()
+
+print(vectorstore)
+
+#breakpoint()
 
 @app.route('/chat', methods=['POST'])
 def chat():
