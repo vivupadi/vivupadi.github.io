@@ -563,6 +563,18 @@ strong {
   display: inline-block;
 }
 
+.two-column-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 12px;
+}
+
+.half-width {
+    flex: 0 0 calc(50% - 20px); /* keep column-gap in mind */
+    box-sizing: border-box;
+}
+
 .profile-body p {
   margin-bottom: 0;
 }
