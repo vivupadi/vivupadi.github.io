@@ -1,8 +1,12 @@
-Flask==3.1.1
-Flask_Cors==5.0.0
-langchain==0.3.26
-langchain_community==0.3.26
-langchain_huggingface==0.3.0
+# CPU-only versions to reduce size
+torch==2.1.0+cpu
+torchvision==0.16.0+cpu
+-f https://download.pytorch.org/whl/torch_stable.html
+
+faiss-cpu==1.8.0.post1
 python-dotenv==1.1.1
 Requests==2.32.4
 streamlit==1.40.1
+huggingface_hub==0.33.4
+langchain_community==0.2.19
+sentence_transformers==3.2.1

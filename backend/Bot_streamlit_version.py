@@ -1,14 +1,8 @@
 import streamlit as st
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 from huggingface_hub import InferenceClient
-from langchain.schema import Document
 import os
-import re
-import faiss
-import numpy as np
 import pickle
 from dotenv import load_dotenv
 
@@ -16,7 +10,7 @@ load_dotenv()
 
 
 # Constants
-INDEX_PATH = "faiss_index.pkl"
+#INDEX_PATH = "faiss_index.pkl"
 
 import requests
 
@@ -28,9 +22,11 @@ st.markdown("Ask questions about Vivek Padayattil")
 @st.cache_resource
 def load_or_process_documents():
     """Cache processed documents to avoid reprocessing"""
-    if os.path.exists(INDEX_PATH):
-        with open(INDEX_PATH, 'rb') as f:
-            return pickle.load(f)
+    #if os.path.exists(INDEX_PATH):
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    vectorstore = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
+        #with open(INDEX_PATH, 'rb') as f:
+        #    return pickle.load(f)
     
     print("Vectorstore returned")
     return vectorstore
@@ -40,9 +36,9 @@ def initialize_qa_model():
     """Lightweight local QA model"""
     return InferenceClient(model="deepset/roberta-base-squad2", token = os.getenv("Hugging_Face_Token"))
 
-def retrieve_context(query, vectorstore, k=1):
+def retrieve_context(query, vectorstore, k=3):
     """Enhanced retrieval with score thresholding"""
-    docs = vectorstore.similarity_search_with_score(query, k=5)
+    docs = vectorstore.similarity_search_with_score(query, k=3)
     return [doc[0].page_content for doc in docs if doc[1] < 1.8]
 
 # Initialize components
@@ -59,7 +55,7 @@ if user_question:
             st.markdown(user_question)
         
         # Retrieve context
-        contexts = retrieve_context(user_question, vectorstore, k=5)
+        contexts = retrieve_context(user_question, vectorstore, k=3)
         #print(contexts)
         
         # Get best answer

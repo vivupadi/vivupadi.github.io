@@ -5,6 +5,10 @@ WORKDIR /app
 
 COPY requirements.txt ./
 
+#To avoid heavy sentence transfromer cuda support, dowmload only cpu version
+RUN pip install --no-cache-dir torch==2.0.1+cpu torchvision==0.15.2+cpu \
+  -f https://download.pytorch.org/whl/torch_stable.html
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
