@@ -520,7 +520,7 @@ nav a:hover::before {
 
 
 .third-content li {
-	font-size: 15px;
+	font-size: 17px;
 	margin: 10px 0px;
 	color: #fff;
 	letter-spacing: 0.8px;
@@ -998,11 +998,11 @@ nav a:hover::before {
 	}
 
 	.seventh-content #map {
-		padding: 30px 30px 30px 30px;
+		padding: 50px 50px 50px 50px;
 	}
 
 	.seventh-content #contact {
-		padding: 30px 30px 30px 30px;
+		padding: 50px 50px 50px 50px;
 	}
 
 }
@@ -1070,13 +1070,33 @@ nav a:hover::before {
 }
 
 @media(max-width: 450px) {
+	nav .logo {
+		display: none;
+	}
+	nav .mini-logo {
+		display: none;
+	}
 	nav ul {
 		margin-top: 30px;
 	}
 	nav ul li {
-		margin: 10px 0px;
+		margin: 20px 0px;
+	}
+	nav ul li em {
+		display: none;
 	}
 	nav a {
 	  	padding: 15px 20px;
 	}
+	p {
+    font-size: 1em; /* ~17.6px, readable body text */
+    line-height: 1.5em; /* ~24px, improves readability */
+    margin: 0.75em 0; /* ~12px vertical spacing */
+  	}
+  	h2 {
+    font-size: 1.75em; /* ~28px, clear hierarchy */
+    line-height: 1.3em; /* ~36.4px, balanced spacing */
+    margin: 1em 0; /* ~16px vertical spacing */
+  	}
 }
+
