@@ -1070,6 +1070,9 @@ nav a:hover::before {
 }
 
 @media(max-width: 450px) {
+	nav{
+		padding: 25px 25px;
+	}
 	nav .logo {
 		display: none;
 	}
@@ -1080,23 +1083,70 @@ nav a:hover::before {
 		margin-top: 30px;
 	}
 	nav ul li {
-		margin: 20px 0px;
+		margin: 20px 5px;
 	}
 	nav ul li em {
 		display: none;
 	}
 	nav a {
-	  	padding: 15px 20px;
+	  	padding: 15px 15px;
 	}
-	p {
-    font-size: 1em; /* ~17.6px, readable body text */
-    line-height: 1.5em; /* ~24px, improves readability */
-    margin: 0.75em 0; /* ~12px vertical spacing */
-  	}
-  	h2 {
-    font-size: 1.75em; /* ~28px, clear hierarchy */
+
+	.first-content {
+		padding: 25px 25px;
+	}
+
+	.first-content .main-btn {
+		display: inline-block;
+		margin-right: 0px;
+		margin-bottom: 15px;
+	}
+
+	.first-content p {
+		font-size: 1.35em; /* ~17.6px, readable body text */
+    	line-height: 1.5em; /* ~24px, improves readability */
+    	margin: 0.75em 0; /* ~12px vertical spacing */
+	}
+
+	.first-content h2 {
+    font-size: 2em; /* ~28px, clear hierarchy */
     line-height: 1.3em; /* ~36.4px, balanced spacing */
     margin: 1em 0; /* ~16px vertical spacing */
   	}
+
+	.second-content p {
+		font-size: 1.35em; /* ~17.6px, readable body text */
+    	line-height: 1.5em; /* ~24px, improves readability */
+    	margin: 0.75em 0; /* ~12px vertical spacing */
+	}
+
+	.second-content h2 {
+    font-size: 2em; /* ~28px, clear hierarchy */
+    line-height: 1.3em; /* ~36.4px, balanced spacing */
+    margin: 1em 0; /* ~16px vertical spacing */
+  	}
+
+	.third-content {
+    	width: 40vw;          /* Increase width of the column */
+  	}
+
+	.third-content p {
+		font-size: 1.35em; /* ~17.6px, readable body text */
+    	line-height: 1.5em; /* ~24px, improves readability */
+    	margin: 0.75em 0; /* ~12px vertical spacing */
+	}
+
+	.third-content h2 {
+		font-size: 2em; /* ~28px, clear hierarchy */
+		line-height: 1.3em; /* ~36.4px, balanced spacing */
+		margin: 1em 0; /* ~16px vertical spacing */
+  	}
+
+	.third-content li {
+    	font-size: 1.35em; /* ~17.6px, readable body text */
+    	line-height: 1.5em; /* ~24px, improves readability */
+    	margin: 0.75em 0; /* ~12px vertical spacing */
+  	}
+
 }
 
