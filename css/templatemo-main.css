@@ -169,9 +169,9 @@ nav {
   	z-index: 100;
   	height: 80vh;
   	left: 0;
-  	width: 20%;
-  	font-weight: 300;
-  	font-size: 1rem;
+  	width: 27%;
+  	font-weight: 400;
+  	font-size: 3rem;
 }
 
 nav em {
@@ -501,7 +501,7 @@ nav a:hover::before {
 }
 
 .third-content .left-content {
-	padding: 60px;
+	padding: 50px;
 	text-align: left;
 }
 
@@ -658,6 +658,12 @@ nav a:hover::before {
 
 .sixth-content .item .thumb {
 	position: relative;
+}
+
+.sixth-content .container-fluid .col-md-4 .git-stats {
+	justify-content: center;
+	margin: 10px;
+	padding-left: 400px;
 }
 
 .sixth-content .item .hover-effect {
@@ -957,7 +963,7 @@ nav a:hover::before {
 @media (max-width: 991px) {
 
 	nav ul {
-  		margin-left: 25px;
+  		margin-left: 5px;
   	}
 
 	.first-content {
@@ -1010,7 +1016,7 @@ nav a:hover::before {
 @media (max-width: 749px) {
 
 	nav {
-		width: 15vh;
+		width: 10vh;
 	}
 
 	nav .logo {
