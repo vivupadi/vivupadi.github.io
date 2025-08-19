@@ -519,7 +519,7 @@ nav a:hover::before {
 }
 
 
-.third-content li {
+.third-content .left-content li {
 	font-size: 17px;
 	margin: 10px 0px;
 	color: #fff;
@@ -527,7 +527,7 @@ nav a:hover::before {
 	font-weight: 300;
 }
 
-.third-content p {
+.third-content .left-content p {
 	font-size: 17px;
 	color: #fff;
 	letter-spacing: 0.8px;
@@ -1147,7 +1147,7 @@ nav a:hover::before {
   	}
 
 	.sixth-content .container-fluid .col-md-4 .git-stats  {
-		display: None;
+		justify-content: center;
 		padding-left: 0;
   	}
 
