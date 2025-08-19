@@ -1146,8 +1146,9 @@ nav a:hover::before {
     	width: 40vw;          /* Increase width of the column */
   	}
 
-	.sixth-content .git-stats {
+	.sixth-content .container-fluid .col-md-4 .git-stats  {
 		display: None;
+		padding-left: 0;
   	}
 
 }
