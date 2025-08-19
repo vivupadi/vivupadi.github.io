@@ -1068,8 +1068,10 @@ nav a:hover::before {
 
 @media(max-width: 450px) {
 	nav{
-		padding: 25px 25px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
+
 	nav .logo {
 		display: none;
 	}
@@ -1077,15 +1079,19 @@ nav a:hover::before {
 		display: none;
 	}
 	nav ul {
-		margin-top: 30px;
+		margin-top: 10px;
+		margin-left: 10px;
 	}
-	nav ul li {
-		margin: 20px 5px;
+
+	nav ul li{
+		margin-top: 20px;
 	}
+
 	nav ul li em {
 		display: none;
+		padding: 25px 0px;
 	}
-	nav a {
+	nav ul li a {
 	  	padding: 15px 15px;
 	}
 
@@ -1100,7 +1106,7 @@ nav a:hover::before {
 	}
 
 	.first-content p {
-		font-size: 1.35em; /* ~17.6px, readable body text */
+		font-size: 1.75em; /* ~17.6px, readable body text */
     	line-height: 1.5em; /* ~24px, improves readability */
     	margin: 0.75em 0; /* ~12px vertical spacing */
 	}
@@ -1112,7 +1118,7 @@ nav a:hover::before {
   	}
 
 	.second-content p {
-		font-size: 1.35em; /* ~17.6px, readable body text */
+		font-size: 1.75em; /* ~17.6px, readable body text */
     	line-height: 1.5em; /* ~24px, improves readability */
     	margin: 0.75em 0; /* ~12px vertical spacing */
 	}
@@ -1128,7 +1134,7 @@ nav a:hover::before {
   	}
 
 	.third-content p {
-		font-size: 1.35em; /* ~17.6px, readable body text */
+		font-size: 1.75em; /* ~17.6px, readable body text */
     	line-height: 1.5em; /* ~24px, improves readability */
     	margin: 0.75em 0; /* ~12px vertical spacing */
 	}
