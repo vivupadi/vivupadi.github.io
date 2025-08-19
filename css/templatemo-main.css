@@ -1070,7 +1070,7 @@ nav a:hover::before {
 	nav{
 		padding-top: 10px;
 		padding-bottom: 10px;
-		margin-bottom: 20px;
+		margin-bottom: 0px;
 	}
 
 	nav .logo {
@@ -1142,26 +1142,12 @@ nav a:hover::before {
     	margin: 0.75em 0; /* ~12px vertical spacing */
   	}
 
-	.third-content {
+	.sixth-content {
     	width: 40vw;          /* Increase width of the column */
   	}
 
-	.third-content p {
-		font-size: 1.75em; /* ~17.6px, readable body text */
-    	line-height: 1.5em; /* ~24px, improves readability */
-    	margin: 0.75em 0; /* ~12px vertical spacing */
-	}
-
-	.third-content h2 {
-		font-size: 2em; /* ~28px, clear hierarchy */
-		line-height: 1.3em; /* ~36.4px, balanced spacing */
-		margin: 1em 0; /* ~16px vertical spacing */
-  	}
-
-	.third-content li {
-    	font-size: 1.35em; /* ~17.6px, readable body text */
-    	line-height: 1.5em; /* ~24px, improves readability */
-    	margin: 0.75em 0; /* ~12px vertical spacing */
+	.sixth-content .git-stats {
+		display: None;
   	}
 
 }
