@@ -1068,8 +1068,8 @@ nav a:hover::before {
 
 @media(max-width: 450px) {
 	nav{
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 	nav .logo {
@@ -1078,22 +1078,11 @@ nav a:hover::before {
 	nav .mini-logo {
 		display: none;
 	}
-	nav ul {
-		margin-top: 10px;
-		margin-left: 10px;
-	}
-
-	nav ul li{
-		margin-top: 20px;
-	}
 
 	nav ul li em {
 		display: none;
-		padding: 25px 0px;
-		font-size: 1.75em;
-	}
-	nav ul li a {
-	  	padding: 15px 15px;
+		padding: 5px 0px;
+		font-size: 1.25em;
 	}
 
 	.first-content {
@@ -1128,6 +1117,28 @@ nav a:hover::before {
     font-size: 2em; /* ~28px, clear hierarchy */
     line-height: 1.3em; /* ~36.4px, balanced spacing */
     margin: 1em 0; /* ~16px vertical spacing */
+  	}
+
+	.third-content {
+    	width: 40vw;          /* Increase width of the column */
+  	}
+
+	.third-content p {
+		font-size: 1.75em; /* ~17.6px, readable body text */
+    	line-height: 1.5em; /* ~24px, improves readability */
+    	margin: 0.75em 0; /* ~12px vertical spacing */
+	}
+
+	.third-content h2 {
+		font-size: 2em; /* ~28px, clear hierarchy */
+		line-height: 1.3em; /* ~36.4px, balanced spacing */
+		margin: 1em 0; /* ~16px vertical spacing */
+  	}
+
+	.third-content li {
+    	font-size: 1.35em; /* ~17.6px, readable body text */
+    	line-height: 1.5em; /* ~24px, improves readability */
+    	margin: 0.75em 0; /* ~12px vertical spacing */
   	}
 
 	.third-content {
