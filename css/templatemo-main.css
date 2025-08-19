@@ -1082,7 +1082,7 @@ nav a:hover::before {
 
 	nav ul li em {
 		display: none;
-		padding: 5px 0px;
+		padding: 5px 5px;
 		font-size: 1.25em;
 	}
 
