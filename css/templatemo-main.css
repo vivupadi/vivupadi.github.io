@@ -1090,6 +1090,7 @@ nav a:hover::before {
 	nav ul li em {
 		display: none;
 		padding: 25px 0px;
+		font-size: 1.75em;
 	}
 	nav ul li a {
 	  	padding: 15px 15px;
