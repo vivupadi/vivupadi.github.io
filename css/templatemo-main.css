@@ -505,6 +505,18 @@ nav a:hover::before {
 	text-align: left;
 }
 
+.third-content .left-content .col-md-9{
+	padding: 5px;
+	text-align: left;
+}
+
+.third-content .left-content .col-md-9 .row{
+	padding: 15px;
+	text-align: left;
+	font-size: 15px;
+	color: #fff;
+}
+
 .third-content h2 {
 	font-size: 36px;
 	text-transform: uppercase;
@@ -1007,7 +1019,7 @@ nav a:hover::before {
 @media (max-width: 749px) {
 
 	nav {
-		width: 10vh;
+		width: 5vh;
 	}
 
 	nav .logo {
@@ -1025,8 +1037,10 @@ nav a:hover::before {
 	}
 
 
-	nav ul li em {
+	nav ul li {
 		display: none;
+		margin-bottom: 5px;
+		font-size: 1.25em;
 	}
 
 	nav ul li i {
