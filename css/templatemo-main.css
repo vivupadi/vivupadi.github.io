@@ -1019,7 +1019,7 @@ nav a:hover::before {
 @media (max-width: 749px) {
 
 	nav {
-		width: 5vh;
+		width: 10vh;
 	}
 
 	nav .logo {
@@ -1027,32 +1027,68 @@ nav a:hover::before {
 	}
 
 	nav .mini-logo {
-		margin-top: 60px;
+		margin-top: 30px;
 		display: block;
 	}
 
 	nav ul {
-		display: flex;
-		justify-content: center; /* centers horizontally */
 		align-items: center;     /* centers vertically */
-		flex-wrap: wrap;         /* allows wrapping on smaller screens */
-		gap: 15px;               /* spacing between items */
+		/*flex-wrap: wrap;  */       /* allows wrapping on smaller screens */
 		list-style: none;
-		margin: 20px 0;
-		padding: 0;
+		padding-left: 15px;
 	}
 
-
 	nav ul li {
-		font-size: 1.25em;
+		font-size: 0.875em;
+		margin-top: 0px;
+		margin-bottom: 30px;
 	}
 
 	nav ul li i {
-		width: 15px;
-		height: 15px;
-		line-height: 20px;
-		text-align: center;
+		width: 10px;
 	}
+
+	nav ul li a, nav ul li a:visited, nav ul li a:active {
+		color: #fff;
+	}
+
+	nav ul li a {
+		text-decoration: none!important;
+		font-size: 15px;
+		letter-spacing: 0.5px;
+		-webkit-transition: color 2s, background 1s;
+		transition: color 2s, background 1s;
+		padding: 10px 10px;
+
+	}
+	nav ul li a.active {
+	background-color: #fff;
+	color: #232323;
+	}
+
+	nav ul li a::before {
+	content: "";
+	position: absolute;
+	height: 0%;
+	width: 0%;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	z-index: -1;
+	}
+
+	nav ul li a:hover {
+		text-decoration: none;
+	-webkit-animation: fillColour 0.7s forwards ease-in-out;
+			animation: fillColour 0.7s forwards ease-in-out;
+	}
+
+	nav ul li a:hover::before {
+	-webkit-animation: fill 0.7s forwards ease-in-out;
+			animation: fill 0.7s forwards ease-in-out;
+	opacity: 1;
+	}
+
 
 	.first-content {
 		padding: 30px 5px;
@@ -1086,8 +1122,8 @@ nav a:hover::before {
 
 @media(max-width: 450px) {
 	nav{
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		margin-bottom: 0px;
 	}
 
@@ -1100,8 +1136,7 @@ nav a:hover::before {
 
 	nav ul li em {
 		display: none;
-		padding: 5px 5px;
-		font-size: 1.25em;
+		font-size: 1.125em;
 	}
 
 	.first-content {
