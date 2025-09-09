@@ -680,7 +680,7 @@ nav a:hover::before {
 .sixth-content .container-fluid .col-md-4 .git-stats {
 	justify-content: center;
 	margin: 5px;
-	padding-left: 250px;
+	padding-left: 50px;
 }
 
 .sixth-content .item .hover-effect {
