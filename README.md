@@ -3,21 +3,20 @@ Hosted using Github actions.
    
 
 ## Chatbot Application
+Purpose
 
 ### Architecture
 
 | Component | Purpose |
 |-----------|---------|
-| **Database: FAISS** | Managing Frontend & Backend services |
-| **Frontend: Streamlit** | Model API for speech to text conversion |
-| **Extractive model** | Preprocessing audio |
-| **Hosting: Azure** | Hosting the Django app on the cloud |
+| **Database: FAISS** | Creating and Managing the Knowledge base |
+| **Frontend: Streamlit** | UI chat app  |
+| **Extractive model** | An Extractival Model that retrieves context from the knowledge base |
+| **Hosting: Azure** | Creating an image and hosting on Azure as a container Instance |
 
  Pinecone --> Chunking --> Tokenization & Embedding
 
  ## Tech Stack
 
  
-Additionally created a RAG based chatbot to answer queries from my CV (In progress).  
-Creating Database using Pinecone --> Chunking --> Tokenization & Embedding  
 
