@@ -1342,6 +1342,10 @@ url("../fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("wo
 .bi-x-square-fill::before { content: "\f628"; }
 .bi-x-square::before { content: "\f629"; }
 .bi-x::before { content: "\f62a"; }
+.bi-xing::before {
+    content: "𝕏";
+    font-weight: bold;
+}
 .bi-youtube::before { content: "\f62b"; }
 .bi-zoom-in::before { content: "\f62c"; }
 .bi-zoom-out::before { content: "\f62d"; }
