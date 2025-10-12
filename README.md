@@ -1,6 +1,22 @@
 # A Personal Portfolio using HTML/CSS/JavaScript.
 Hosted using Github actions.  
-Tried hosting on Render Free Tier. (In progress)   
-Additionally created a RAG based chatbot to answer queries from my CV (In progress).  
-Creating Database using Pinecone --> Chunking --> Tokenization & Embedding  
+   
+
+## Chatbot Application
+Purpose
+
+### Architecture
+
+| Component | Purpose |
+|-----------|---------|
+| **Database: FAISS** | Creating and Managing the Knowledge base |
+| **Frontend: Streamlit** | UI chat app  |
+| **Extractive model** | An Extractival Model that retrieves context from the knowledge base |
+| **Hosting: Azure** | Creating an image and hosting on Azure as a container Instance |
+
+ Pinecone --> Chunking --> Tokenization & Embedding
+
+ ## Tech Stack
+
+ 
 
